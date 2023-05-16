@@ -32,3 +32,13 @@ This is my function using more advanced concepts like arrow notation, ternary ex
 It felt right to split off the add sequential digits function into its own function and I think that even now I could potentially refactor the advanced form of the function to be more concise. That being said I did make a few specific decisions to make the function easier to read. The if else statement on line 74 being the biggest one; I could have made it a ternary expression too but it seems a lot easier to read in the usual if else format. 
 
 I also may have been able to make the addSequentialDigitsAdvanced function serve both on line 79 and replace what is going on on line 84. I'm happy with how it functions at the moment though so I chose to stop at this point. 
+
+## Setup/Installation Requirements
+* _Download or Clone the repo down to your computer._
+* _Navigate into the "credit-card-validator" directory you just downloaded and double click on the index.html to launch the webpage.
+You will only be able to see results in the console and actually use the validator in the code.
+
+## Contact Me
+
+_Let me know if you run into any issues or have questions, ideas or concerns:_  
+_dolanp1992@gmail.com_
