@@ -8,7 +8,7 @@
 // Valid: 4102080860435620
 // Invalid: 4102080880435620
 
-const addSequentialDigits = (num) => {
+const addSequentialDigitsAdvanced = (num) => {
 	return num.toString().split("").map(e => parseInt(e)).reduce((sum, num) => sum + num);
 }
 
@@ -23,7 +23,7 @@ const luhnsAlgorithmAdvanced = (cardNumberString) => {
     } else {
     	let doubledDigit = e * 2;
       // Check if doubled number is a double digit number and add them if they are
-      return (doubledDigit > 9) ? addSequentialDigits(doubledDigit) : doubledDigit;
+      return (doubledDigit > 9) ? addSequentialDigitsAdvanced(doubledDigit) : doubledDigit;
     }
   });
 
