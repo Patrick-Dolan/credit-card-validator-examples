@@ -12,7 +12,7 @@ const addSequentialDigits = (num) => {
 	return num.toString().split("").map(e => parseInt(e)).reduce((sum, num) => sum + num);
 }
 
-const luhnsAlgorithm = (cardNumberString) => {
+const luhnsAlgorithmAdvanced = (cardNumberString) => {
 	//Split digits into an array and parse them into numbers from string
 	let cardNumArr = cardNumberString.split("").map(e => parseInt(e));
 
@@ -23,11 +23,7 @@ const luhnsAlgorithm = (cardNumberString) => {
     } else {
     	let doubledDigit = e * 2;
       // Check if doubled number is a double digit number and add them if they are
-      if (doubledDigit > 9) {
-        return addSequentialDigits(doubledDigit)
-      } else {
-        return doubledDigit
-      }
+      return (doubledDigit > 9) ? addSequentialDigits(doubledDigit) : doubledDigit;
     }
   });
 
@@ -35,14 +31,13 @@ const luhnsAlgorithm = (cardNumberString) => {
 	let summedDigitsString = cardNumProcessedDigits.reduce((sum, num) => sum + num).toString();
 
   // Return result based on summedDigitsString
-  if (summedDigitsString[summedDigitsString.length - 1] === "0") {
-    return "This card number is valid.";
-  } else {
-    return "This card number is not valid.";
-  }
+  return (summedDigitsString[summedDigitsString.length - 1] === "0") ?  "This card number is valid." : "This card number is not valid.";
 }
 
 // Valid result expected
-console.log(luhnsAlgorithm("4102080860435620"));
+// console.log(luhnsAlgorithmAdvanced("4102080860435620"));
 // Invalid result expected
-console.log(luhnsAlgorithm("4102080880435620"));
+// console.log(luhnsAlgorithmAdvanced("4102080880435620"));
+
+const cardNumber = window.prompt("Enter a credit card number: ");
+window.alert(luhnsAlgorithmAdvanced(cardNumber));
